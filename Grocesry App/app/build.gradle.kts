@@ -70,4 +70,13 @@ dependencies {
     // ✅ AndroidX Hilt
     implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.androidx.hilt.compiler)
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+
+// Kotlin Extensions and Coroutines support
+    implementation("androidx.room:room-ktx:2.6.1")
+
+    implementation("androidx.compose.material:material:1.6.8")
+
 }
