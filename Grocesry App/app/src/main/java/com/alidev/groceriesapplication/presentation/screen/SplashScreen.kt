@@ -48,6 +48,7 @@ fun SplashScreen(
         )
         delay(1200L)
         navController.popBackStack()
+        navController.navigate(Graph.MAIN)
 
 //        if (onBoardingIsCompleted) navController.navigate(Graph.MAIN)
 //        else navController.navigate(Screen.OnBoarding.route)
