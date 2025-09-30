@@ -42,6 +42,10 @@ android {
     }
 }
 
+hilt {
+    enableAggregatingTask = false
+}
+
 dependencies {
     // AndroidX + Compose (from version catalog)
     implementation(libs.androidx.core.ktx)
@@ -52,7 +56,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.material3)
+//    implementation(libs.androidx.material3)
 
     // Testing
     testImplementation(libs.junit)
@@ -70,6 +74,9 @@ dependencies {
     // ✅ AndroidX Hilt
     implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.androidx.hilt.compiler)
+
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.datastore.core)
 
     implementation("androidx.room:room-runtime:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")

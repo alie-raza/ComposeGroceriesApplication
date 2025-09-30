@@ -1,4 +1,5 @@
-package haw.bmaajp.groceriesapp.domain.repository
+
+package com.alidev.groceriesapplication.domain
 
 import kotlinx.coroutines.flow.Flow
 

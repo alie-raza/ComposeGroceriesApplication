@@ -1,6 +1,8 @@
 package com.alidev.groceriesapplication.domain.usecase.saveonboarding
 
-data class UseCases(
+import javax.inject.Inject
+
+data class UseCases @Inject constructor(
     val saveOnBoardingUseCase: SaveOnBoardingUseCase,
 //    val insertProductsUseCase: InsertProductsUseCase,
 //    val readOnBoardingUseCase: ReadOnBoardingUseCase,

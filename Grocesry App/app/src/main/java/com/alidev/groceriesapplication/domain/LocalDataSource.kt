@@ -1,6 +1,6 @@
-package haw.bmaajp.groceriesapp.domain.repository
 
-import com.alidev.groceriesapplication.domain.ProductItem
+package com.alidev.groceriesapplication.domain
+
 import kotlinx.coroutines.flow.Flow
 
 interface LocalDataSource {
