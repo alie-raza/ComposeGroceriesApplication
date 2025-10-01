@@ -1,5 +1,6 @@
 package com.alidev.groceriesapplication.presentation.screen.home
 
+import android.content.Context
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,12 +10,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.Icon
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -23,26 +28,30 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.alidev.groceriesapplication.R
+import com.alidev.groceriesapplication.domain.ProductItem
 import com.alidev.groceriesapplication.navigation.screen.Screen
+import com.alidev.groceriesapplication.presentation.component.ListContentProduct
 import com.alidev.groceriesapplication.presentation.component.SearchViewBar
 import com.alidev.groceriesapplication.presentation.component.SliderBanner
 import com.alidev.groceriesapplication.ui.theme.DIMENS_24dp
 import com.alidev.groceriesapplication.ui.theme.GilroyFontFamily
 import com.alidev.groceriesapplication.ui.theme.GrayThirdTextColor
 import com.alidev.groceriesapplication.ui.theme.TEXT_SIZE_12sp
+import com.alidev.groceriesapplication.utils.showToastShort
 
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
     navController: NavHostController,
-//    homeViewModel: HomeViewModel = hiltViewModel()
+    homeViewModel: HomeViewModel = hiltViewModel()
 ) {
     val mContext = LocalContext.current
 //    val searchQuery by homeViewModel.searchQuery
-//    val allProducts by homeViewModel.productList.collectAsState()
+    val allProducts by homeViewModel.productList.collectAsState()
 
     Scaffold { padding ->
         Column(
@@ -63,25 +72,26 @@ fun HomeScreen(
 
             SliderBanner()
 
-//            ListContentProduct(
-//                title = stringResource(id = R.string.exclusive_offer),
-//                products = allProducts,
-//                navController = navController,
-//                onClickToCart = { productItem ->
-//                    clickToCart(mContext, productItem, homeViewModel)
-//                }
-//            )
-//
-//            Spacer(modifier = height(DIMENS_24dp))
-//
-//            ListContentProduct(
-//                title = stringResource(id = R.string.best_selling),
-//                products = allProducts.sortedByDescending { it.id },
-//                navController = navController,
-//                onClickToCart = { productItem ->
-//                    clickToCart(mContext, productItem, homeViewModel)
-//                }
-//            )
+            ListContentProduct(
+                title = stringResource(id = R.string.exclusive_offer),
+                products = allProducts,
+                navController = navController,
+                onClickToCart = { productItem ->
+                    clickToCart(mContext, productItem, homeViewModel)
+                }
+            )
+
+
+            Spacer(modifier = Modifier.height(DIMENS_24dp))
+
+            ListContentProduct(
+                title = stringResource(id = R.string.best_selling),
+                products = allProducts.sortedByDescending { it.id },
+                navController = navController,
+                onClickToCart = { productItem ->
+                    clickToCart(mContext, productItem, homeViewModel)
+                }
+            )
         }
     }
 }
@@ -124,10 +134,10 @@ fun HeaderLocationHome(
     }
 }
 
-//fun clickToCart(context: Context, productItem: ProductItem, viewModel: HomeViewModel) {
-//    context.showToastShort("Success Add To Cart ${productItem.title}")
-//    viewModel.addCart(productItem.copy(isCart = true))
-//}
+fun clickToCart(context: Context, productItem: ProductItem, viewModel: HomeViewModel) {
+    context.showToastShort("Success Add To Cart ${productItem.title}")
+    viewModel.addCart(productItem.copy(isCart = true))
+}
 
 @Preview(showBackground = true)
 @Composable

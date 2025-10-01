@@ -3,6 +3,8 @@ import android.content.Context
 import com.alidev.groceriesapplication.data.OnBoardingOperationImpl
 import com.alidev.groceriesapplication.data.Repository
 import com.alidev.groceriesapplication.domain.OnBoardingOperations
+import com.alidev.groceriesapplication.domain.addcartusecase.AddCartUseCase
+import com.alidev.groceriesapplication.domain.getallproduct.GetAllProductUseCase
 import com.alidev.groceriesapplication.domain.usecase.saveonboarding.SaveOnBoardingUseCase
 import com.alidev.groceriesapplication.domain.usecase.saveonboarding.UseCases
 import dagger.Module
@@ -27,7 +29,10 @@ object RepositoryModule {
     @Singleton
     fun provideUseCase(repository: Repository): UseCases {
         return UseCases(
-            saveOnBoardingUseCase = SaveOnBoardingUseCase(repository)
+            saveOnBoardingUseCase = SaveOnBoardingUseCase(repository),
+            getAllProductUseCase = GetAllProductUseCase(repository),
+            addCartUseCase = AddCartUseCase(repository)
+
         )
     }
 
