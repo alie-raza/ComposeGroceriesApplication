@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.alidev.groceriesapplication.navigation.screen.Screen
+import com.alidev.groceriesapplication.presentation.screen.OnBoardingScreen
 import com.alidev.groceriesapplication.presentation.screen.SplashScreen
 @Composable
 fun RootNavigationGraph(navController: NavHostController) {
@@ -17,9 +18,9 @@ fun RootNavigationGraph(navController: NavHostController) {
             SplashScreen(navController = navController)
         }
 
-//        composable(route = Screen.OnBoarding.route) {
-//            OnBoardingScreen(navController = navController)
-//        }
+        composable(route = Screen.OnBoarding.route) {
+            OnBoardingScreen(navController = navController)
+        }
 
         composable(route = Graph.MAIN) {
 //            MainScreen()
