@@ -5,8 +5,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.alidev.groceriesapplication.navigation.screen.Screen
-import com.alidev.groceriesapplication.presentation.screen.OnBoardingScreen
+import com.alidev.groceriesapplication.presentation.screen.MainScreen
 import com.alidev.groceriesapplication.presentation.screen.SplashScreen
+import com.alidev.groceriesapplication.presentation.screen.onboarding.OnBoardingScreen
+
 @Composable
 fun RootNavigationGraph(navController: NavHostController) {
     NavHost(
@@ -23,7 +25,7 @@ fun RootNavigationGraph(navController: NavHostController) {
         }
 
         composable(route = Graph.MAIN) {
-//            MainScreen()
+            MainScreen()
         }
     }
 }

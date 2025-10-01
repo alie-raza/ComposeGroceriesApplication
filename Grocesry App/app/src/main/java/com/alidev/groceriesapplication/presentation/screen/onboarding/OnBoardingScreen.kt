@@ -27,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.alidev.groceriesapplication.R
+import com.alidev.groceriesapplication.navigation.graph.Graph
 import com.alidev.groceriesapplication.ui.theme.DIMENS_12dp
 import com.alidev.groceriesapplication.ui.theme.DIMENS_16dp
 import com.alidev.groceriesapplication.ui.theme.DIMENS_40dp
@@ -39,47 +40,60 @@ import com.alidev.groceriesapplication.ui.theme.TEXT_SIZE_16sp
 import com.alidev.groceriesapplication.ui.theme.TEXT_SIZE_18sp
 import com.alidev.groceriesapplication.ui.theme.TEXT_SIZE_49sp
 
+@Composable
 fun OnBoardingScreen(
     modifier: Modifier = Modifier,
-    navController: NavHostController
+    navController: NavHostController,
+//    onBoardingViewModel: OnBoardingViewModel = hiltViewModel()
 ) {
-
-
+    OnBoarding(
+        modifier = modifier.fillMaxSize(),
+        onClick = {
+            navController.popBackStack()
+            navController.navigate(Graph.MAIN)
+//            onBoardingViewModel.saveOnBoardingState(isCompleted = true)
+        }
+    )
 }
 
 @Composable
-fun onBoarding(
+fun OnBoarding(
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+    Box(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
         Image(
             modifier = Modifier.fillMaxSize(),
             painter = painterResource(id = R.drawable.img_onboarding),
             contentDescription = stringResource(R.string.image_on_boarding),
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Crop
         )
-        Surface(
+        androidx.compose.material.Surface(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(bottom = DIMENS_90dp),
             color = Color.Transparent
         ) {
-            Column (horizontalAlignment = Alignment.CenterHorizontally){
-                Text(
-                    text = stringResource(R.string.welcome_to_store),
-                    color = Color.White,
-                    fontWeight = FontWeight.Bold,
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                androidx.compose.material3.Text(
+                    text = stringResource(id = R.string.welcome_to_store),
                     fontFamily = GilroyFontFamily,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = TEXT_SIZE_49sp,
+                    color = Color.White,
                     textAlign = TextAlign.Center,
                 )
-                Text(
+                androidx.compose.material3.Text(
                     text = stringResource(R.string.desc_welcome),
-                    color = GrayTextColor,
-                    fontWeight = FontWeight.Medium,
                     fontFamily = GilroyFontFamily,
+                    fontWeight = FontWeight.Medium,
                     fontSize = TEXT_SIZE_16sp,
+                    color = GrayTextColor,
                     textAlign = TextAlign.Center,
                 )
                 Spacer(modifier = Modifier.height(DIMENS_40dp))
@@ -94,7 +108,7 @@ fun onBoarding(
                     colors = ButtonDefaults.buttonColors(backgroundColor = Green),
                     shape = RoundedCornerShape(DIMENS_12dp),
                 ) {
-                    Text(
+                    androidx.compose.material3.Text(
                         text = stringResource(R.string.get_started),
                         fontFamily = GilroyFontFamily,
                         fontWeight = FontWeight.SemiBold,
@@ -102,27 +116,14 @@ fun onBoarding(
                         color = Color.White
                     )
                 }
-
-
-
-
-
             }
-
-
-
         }
     }
-
-
-
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun OnBoardingPreview() {
-    onBoarding(
-        onClick = {}
-    )
+    OnBoarding(onClick = {})
 }
 
