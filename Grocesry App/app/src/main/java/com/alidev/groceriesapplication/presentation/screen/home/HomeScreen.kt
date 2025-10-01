@@ -27,6 +27,7 @@ import androidx.navigation.NavHostController
 import com.alidev.groceriesapplication.R
 import com.alidev.groceriesapplication.navigation.screen.Screen
 import com.alidev.groceriesapplication.presentation.component.SearchViewBar
+import com.alidev.groceriesapplication.presentation.component.SliderBanner
 import com.alidev.groceriesapplication.ui.theme.DIMENS_24dp
 import com.alidev.groceriesapplication.ui.theme.GilroyFontFamily
 import com.alidev.groceriesapplication.ui.theme.GrayThirdTextColor
@@ -59,8 +60,8 @@ fun HomeScreen(
                     if (it.isNotEmpty()) navController.navigate(Screen.Search.route)
                 }
             )
-//
-//            SliderBanner()
+
+            SliderBanner()
 
 //            ListContentProduct(
 //                title = stringResource(id = R.string.exclusive_offer),
