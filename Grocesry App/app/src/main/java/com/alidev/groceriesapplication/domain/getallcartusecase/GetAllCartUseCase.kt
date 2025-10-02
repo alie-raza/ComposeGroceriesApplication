@@ -9,6 +9,6 @@ class GetAllCartUseCase(
 ) {
 
     operator fun invoke(isCart: Boolean): Flow<List<ProductItem>> =
-        repository.getAllProduct();
+        repository.getAllProductCart(isCart)
 
 }
