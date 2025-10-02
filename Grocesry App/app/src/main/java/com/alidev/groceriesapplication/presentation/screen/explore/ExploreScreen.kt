@@ -15,7 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.alidev.groceriesapplication.R
-import com.alidev.groceriesapplication.presentation.card.CategoryCard
+import com.alidev.groceriesapplication.presentation.common.card.CategoryCard
 import com.alidev.groceriesapplication.presentation.component.SearchViewBar
 import com.alidev.groceriesapplication.ui.theme.Black
 import com.alidev.groceriesapplication.ui.theme.DIMENS_10dp

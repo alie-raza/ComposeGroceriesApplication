@@ -8,6 +8,7 @@ import com.alidev.groceriesapplication.navigation.screen.BottomNavItemScreen
 import com.alidev.groceriesapplication.navigation.screen.Screen
 import com.alidev.groceriesapplication.presentation.screen.about.AboutScreen
 import com.alidev.groceriesapplication.presentation.screen.cart.CartScreen
+import com.alidev.groceriesapplication.presentation.screen.detail.DetailScreen
 import com.alidev.groceriesapplication.presentation.screen.explore.ExploreScreen
 import com.alidev.groceriesapplication.presentation.screen.home.HomeScreen
 import com.alidev.groceriesapplication.utils.Constants.PRODUCT_ARGUMENT_KEY
@@ -50,7 +51,7 @@ fun NavGraphBuilder.detailsNavGraph() {
                 type = NavType.IntType
             })
         ) {
-//            DetailScreen()
+            DetailScreen()
         }
     }
 }

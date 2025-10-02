@@ -1,4 +1,4 @@
-package com.alidev.groceriesapplication.presentation.card
+package com.alidev.groceriesapplication.presentation.common.card
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image

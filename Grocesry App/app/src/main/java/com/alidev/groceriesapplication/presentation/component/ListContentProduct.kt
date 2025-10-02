@@ -20,7 +20,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.alidev.groceriesapplication.R
 import com.alidev.groceriesapplication.domain.ProductItem
-import com.alidev.groceriesapplication.presentation.card.ProductCard
+import com.alidev.groceriesapplication.presentation.common.card.ProductCard
 import com.alidev.groceriesapplication.ui.theme.Black
 import com.alidev.groceriesapplication.ui.theme.DIMENS_16dp
 import com.alidev.groceriesapplication.ui.theme.DIMENS_2dp

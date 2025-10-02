@@ -11,7 +11,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.alidev.groceriesapplication.R
-import com.alidev.groceriesapplication.presentation.card.ListContentCart
+import com.alidev.groceriesapplication.presentation.common.card.ListContentCart
 import com.alidev.groceriesapplication.ui.theme.Black
 import com.alidev.groceriesapplication.ui.theme.DIMENS_16dp
 import com.alidev.groceriesapplication.ui.theme.GilroyFontFamily
