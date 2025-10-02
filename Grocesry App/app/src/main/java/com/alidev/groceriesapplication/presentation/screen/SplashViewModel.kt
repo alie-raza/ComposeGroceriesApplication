@@ -2,7 +2,7 @@ package com.alidev.groceriesapplication.presentation.screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.alidev.groceriesapplication.domain.usecase.saveonboarding.UseCases
+import com.alidev.groceriesapplication.domain.UseCases
 import com.alidev.groceriesapplication.utils.DataDummy
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

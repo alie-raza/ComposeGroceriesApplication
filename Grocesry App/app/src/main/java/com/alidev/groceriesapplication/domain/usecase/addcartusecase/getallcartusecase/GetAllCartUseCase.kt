@@ -1,4 +1,4 @@
-package com.alidev.groceriesapplication.domain.getallcartusecase
+package com.alidev.groceriesapplication.domain.usecase.addcartusecase.getallcartusecase
 
 import com.alidev.groceriesapplication.data.Repository
 import com.alidev.groceriesapplication.domain.ProductItem

@@ -1,7 +1,6 @@
-package com.alidev.groceriesapplication.domain.usecase.saveonboarding
+package com.alidev.groceriesapplication.domain
 
 import com.alidev.groceriesapplication.data.Repository
-import javax.inject.Inject
 
 class SaveOnBoardingUseCase(
     private val repository: Repository

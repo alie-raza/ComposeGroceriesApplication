@@ -4,7 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alidev.groceriesapplication.domain.ProductItem
-import com.alidev.groceriesapplication.domain.usecase.saveonboarding.UseCases
+import com.alidev.groceriesapplication.domain.UseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

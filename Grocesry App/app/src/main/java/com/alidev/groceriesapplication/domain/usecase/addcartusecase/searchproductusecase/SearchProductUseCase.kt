@@ -1,4 +1,4 @@
-package com.alidev.groceriesapplication.domain.searchproductusecase
+package com.alidev.groceriesapplication.domain.usecase.addcartusecase.searchproductusecase
 
 import com.alidev.groceriesapplication.data.Repository
 
