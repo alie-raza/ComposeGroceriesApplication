@@ -36,6 +36,13 @@ fun CartScreen(
 
         Spacer(modifier = Modifier.height(DIMENS_16dp))
 
+        ListContentCart(
+            cartProducts = productCartList,
+            onClickDeleteCart = { productItem ->
+                cartViewModel.deleteCart(productItem.copy(isCart = false))
+            }
+        )
+
 
     }
 }
