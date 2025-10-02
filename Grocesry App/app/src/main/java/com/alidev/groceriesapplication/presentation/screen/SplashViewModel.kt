@@ -3,6 +3,7 @@ package com.alidev.groceriesapplication.presentation.screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alidev.groceriesapplication.domain.usecase.saveonboarding.UseCases
+import com.alidev.groceriesapplication.utils.DataDummy
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,15 +19,15 @@ class SplashViewModel @Inject constructor(
     private val _onBoardingIsCompleted = MutableStateFlow(false)
     val onBoardingIsCompleted: StateFlow<Boolean> = _onBoardingIsCompleted
 
-//    init {
-//        viewModelScope.launch {
-//            useCases.insertProductsUseCase.invoke(DataDummy.generateDummyProduct())
-//        }
+    init {
+        viewModelScope.launch {
+            useCases.insertProductsUseCase.invoke(DataDummy.generateDummyProduct())
+        }
 //
 //        viewModelScope.launch(Dispatchers.IO) {
 //            _onBoardingIsCompleted.value =
 //                useCases.readOnBoardingUseCase().stateIn(viewModelScope).value
 //        }
-//    }
+    }
 
 }

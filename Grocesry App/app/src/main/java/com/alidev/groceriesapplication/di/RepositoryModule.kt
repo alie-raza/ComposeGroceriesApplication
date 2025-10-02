@@ -5,6 +5,7 @@ import com.alidev.groceriesapplication.data.Repository
 import com.alidev.groceriesapplication.domain.OnBoardingOperations
 import com.alidev.groceriesapplication.domain.addcartusecase.AddCartUseCase
 import com.alidev.groceriesapplication.domain.getallproduct.GetAllProductUseCase
+import com.alidev.groceriesapplication.domain.saveproductusecase.InsertProductsUseCase
 import com.alidev.groceriesapplication.domain.usecase.saveonboarding.SaveOnBoardingUseCase
 import com.alidev.groceriesapplication.domain.usecase.saveonboarding.UseCases
 import dagger.Module
@@ -31,8 +32,8 @@ object RepositoryModule {
         return UseCases(
             saveOnBoardingUseCase = SaveOnBoardingUseCase(repository),
             getAllProductUseCase = GetAllProductUseCase(repository),
-            addCartUseCase = AddCartUseCase(repository)
-
+            addCartUseCase = AddCartUseCase(repository),
+            insertProductsUseCase = InsertProductsUseCase(repository)
         )
     }
 
