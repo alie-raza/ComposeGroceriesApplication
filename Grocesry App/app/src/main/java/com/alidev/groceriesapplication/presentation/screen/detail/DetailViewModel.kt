@@ -22,13 +22,13 @@ class DetailViewModel @Inject constructor(
     private val _selectedProduct: MutableStateFlow<ProductItem?> = MutableStateFlow(null)
     val selectedProduct: StateFlow<ProductItem?> = _selectedProduct
 
-//    init {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            val productId = saveStatedHandle.get<Int>(PRODUCT_ARGUMENT_KEY) ?: 0
-//            _selectedProduct.value =
-//                useCases.getSelectedProductUseCase.invoke(productId = productId)
-//        }
-//    }
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            val productId = saveStatedHandle.get<Int>(PRODUCT_ARGUMENT_KEY) ?: 0
+            _selectedProduct.value =
+                useCases.getSelectedProductUseCase.invoke(productId = productId)
+        }
+    }
 
     fun addCart(productItem: ProductItem) = viewModelScope.launch {
         useCases.addCartUseCase.invoke(productItem)

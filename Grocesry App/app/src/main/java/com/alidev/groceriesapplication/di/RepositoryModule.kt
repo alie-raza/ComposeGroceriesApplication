@@ -12,6 +12,7 @@ import com.alidev.groceriesapplication.domain.usecase.addcartusecase.saveproduct
 import com.alidev.groceriesapplication.domain.usecase.addcartusecase.searchproductusecase.SearchProductUseCase
 import com.alidev.groceriesapplication.domain.SaveOnBoardingUseCase
 import com.alidev.groceriesapplication.domain.UseCases
+import com.alidev.groceriesapplication.domain.getselectedproduct.GetSelectedProductUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,7 +41,8 @@ object RepositoryModule {
             insertProductsUseCase = InsertProductsUseCase(repository),
             getAllCartUseCase = GetAllCartUseCase(repository),
             deleteCart = DeleteCartUseCase(repository),
-            searchProductUseCase = SearchProductUseCase(repository)
+            searchProductUseCase = SearchProductUseCase(repository),
+            getSelectedProductUseCase = GetSelectedProductUseCase(repository)
         )
     }
 
