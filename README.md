@@ -1,40 +1,38 @@
-Groceries App
+# 🛒 Groceries App
 
-Platform  Kotlin  Gradle  Star
+![Platform](https://img.shields.io/badge/platform-Android-green)
+![Kotlin](https://img.shields.io/badge/kotlin-1.6.10-blue)
+![Gradle](https://img.shields.io/badge/gradle-7.4.0-yellow)
+![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO?style=social)
 
+---
 
+## 🚀 Jetpack Compose Awesome
 
+This is a **modern groceries shopping app** built with **Jetpack Compose**.  
+It follows **MVVM + Clean Architecture** principles and uses **Kotlin, Hilt, Room, and Coroutines**.
 
+<p align="center">
+  <img src="assets/screenshots/app_preview.png" width="600" alt="App Preview" />
+</p>
 
-*Thank you for making this design
+---
 
-Introduction
+## 📖 Introduction
 
-This project uses jetpack compose technology, in short jetpack Compose is Android’s recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
+This project demonstrates building a groceries shopping app with Jetpack Compose.  
+Key features include:
 
-Installation
+- 🛍️ Browse products  
+- 🔍 Search products  
+- 🛒 Add to cart  
+- ❤️ Wishlist support  
+- 💳 Checkout flow  
 
-Clone or Download and Open it into Android Studio or other IDE
+---
 
-    https://https://github.com/HariAgus/GroceriesApp-Compose.git    
-Preview App
+## ⚙️ Installation
 
-Splash Screen	On Boarding Screen	Home Screen	Detail Screen
-			
-Category Screen	Cart Screen	Profile Screen	Empty Screen
-			
-Tech Stack
-
-MVVM (Model View View Model)
-Use Case (for interaction data)
-Room Database
-Clean Architecture (data, domain, layer)
-Clean Code
-Dependencies
-
-Compose UI
-Dagger-Hilt
-Room Database
-Accompanist System UI Controller
-Pager
-Data Store
+1. Clone the repo
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
