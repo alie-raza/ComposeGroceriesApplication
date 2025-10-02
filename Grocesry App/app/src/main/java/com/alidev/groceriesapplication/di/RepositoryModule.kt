@@ -1,9 +1,11 @@
 package com.alidev.groceriesapplication.di
+
 import android.content.Context
 import com.alidev.groceriesapplication.data.OnBoardingOperationImpl
 import com.alidev.groceriesapplication.data.Repository
 import com.alidev.groceriesapplication.domain.OnBoardingOperations
 import com.alidev.groceriesapplication.domain.addcartusecase.AddCartUseCase
+import com.alidev.groceriesapplication.domain.deletecartusecase.DeleteCartUseCase
 import com.alidev.groceriesapplication.domain.getallcartusecase.GetAllCartUseCase
 import com.alidev.groceriesapplication.domain.getallproduct.GetAllProductUseCase
 import com.alidev.groceriesapplication.domain.saveproductusecase.InsertProductsUseCase
@@ -35,7 +37,8 @@ object RepositoryModule {
             getAllProductUseCase = GetAllProductUseCase(repository),
             addCartUseCase = AddCartUseCase(repository),
             insertProductsUseCase = InsertProductsUseCase(repository),
-                    getAllCartUseCase = GetAllCartUseCase(repository),
+            getAllCartUseCase = GetAllCartUseCase(repository),
+            deleteCart = DeleteCartUseCase(repository)
         )
     }
 

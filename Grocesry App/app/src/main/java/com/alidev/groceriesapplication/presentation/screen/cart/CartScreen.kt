@@ -43,8 +43,8 @@ fun CartScreen(
         ListContentCart(
             cartProducts = productCartList,
             onClickDeleteCart = {
-//                productItem ->
-//                cartViewModel.deleteCart(productItem.copy(isCart = false))
+                productItem ->
+                cartViewModel.deleteCart(productItem.copy(isCart = false))
             }
         )
 

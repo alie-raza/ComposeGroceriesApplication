@@ -1,6 +1,7 @@
 package com.alidev.groceriesapplication.domain.usecase.saveonboarding
 
 import com.alidev.groceriesapplication.domain.addcartusecase.AddCartUseCase
+import com.alidev.groceriesapplication.domain.deletecartusecase.DeleteCartUseCase
 import com.alidev.groceriesapplication.domain.getallcartusecase.GetAllCartUseCase
 import com.alidev.groceriesapplication.domain.getallproduct.GetAllProductUseCase
 import com.alidev.groceriesapplication.domain.saveproductusecase.InsertProductsUseCase
@@ -14,6 +15,6 @@ data class UseCases @Inject constructor(
     val getAllProductUseCase: GetAllProductUseCase,
     val getAllCartUseCase: GetAllCartUseCase,
     val addCartUseCase: AddCartUseCase,
-//    val deleteCart: DeleteCartUseCase,
+    val deleteCart: DeleteCartUseCase,
 //    val searchProductUseCase: SearchProductUseCase
 )
