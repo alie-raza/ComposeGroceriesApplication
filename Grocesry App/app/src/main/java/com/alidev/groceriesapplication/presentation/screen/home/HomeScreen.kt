@@ -50,7 +50,7 @@ fun HomeScreen(
     homeViewModel: HomeViewModel = hiltViewModel()
 ) {
     val mContext = LocalContext.current
-//    val searchQuery by homeViewModel.searchQuery
+    val searchQuery by homeViewModel.searchQuery
     val allProducts by homeViewModel.productList.collectAsState()
 
     Scaffold { padding ->
@@ -64,7 +64,7 @@ fun HomeScreen(
 
             SearchViewBar(
                 hint = stringResource(id = R.string.search_store),
-                query = "as",
+                query = searchQuery,
                 onValueChange = {
                     if (it.isNotEmpty()) navController.navigate(Screen.Search.route)
                 }
