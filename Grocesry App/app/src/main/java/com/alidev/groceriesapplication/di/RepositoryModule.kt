@@ -4,6 +4,7 @@ import com.alidev.groceriesapplication.data.OnBoardingOperationImpl
 import com.alidev.groceriesapplication.data.Repository
 import com.alidev.groceriesapplication.domain.OnBoardingOperations
 import com.alidev.groceriesapplication.domain.addcartusecase.AddCartUseCase
+import com.alidev.groceriesapplication.domain.getallcartusecase.GetAllCartUseCase
 import com.alidev.groceriesapplication.domain.getallproduct.GetAllProductUseCase
 import com.alidev.groceriesapplication.domain.saveproductusecase.InsertProductsUseCase
 import com.alidev.groceriesapplication.domain.usecase.saveonboarding.SaveOnBoardingUseCase
@@ -33,7 +34,8 @@ object RepositoryModule {
             saveOnBoardingUseCase = SaveOnBoardingUseCase(repository),
             getAllProductUseCase = GetAllProductUseCase(repository),
             addCartUseCase = AddCartUseCase(repository),
-            insertProductsUseCase = InsertProductsUseCase(repository)
+            insertProductsUseCase = InsertProductsUseCase(repository),
+                    getAllCartUseCase = GetAllCartUseCase(repository),
         )
     }
 

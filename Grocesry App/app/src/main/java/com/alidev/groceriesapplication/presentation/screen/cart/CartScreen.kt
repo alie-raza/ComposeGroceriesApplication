@@ -3,11 +3,15 @@ package com.alidev.groceriesapplication.presentation.screen.cart
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.alidev.groceriesapplication.R
+import com.alidev.groceriesapplication.presentation.card.ListContentCart
 import com.alidev.groceriesapplication.ui.theme.Black
 import com.alidev.groceriesapplication.ui.theme.DIMENS_16dp
 import com.alidev.groceriesapplication.ui.theme.GilroyFontFamily
@@ -16,9 +20,9 @@ import com.alidev.groceriesapplication.ui.theme.TEXT_SIZE_18sp
 @Composable
 fun CartScreen(
     modifier: Modifier = Modifier,
-//    cartViewModel: CartViewModel = hiltViewModel()
+    cartViewModel: CartViewModel = hiltViewModel()
 ) {
-//    val productCartList by cartViewModel.productCartList.collectAsState()
+    val productCartList by cartViewModel.productCartList.collectAsState()
 
     Column(
         modifier = modifier.fillMaxSize()
@@ -38,8 +42,9 @@ fun CartScreen(
 
         ListContentCart(
             cartProducts = productCartList,
-            onClickDeleteCart = { productItem ->
-                cartViewModel.deleteCart(productItem.copy(isCart = false))
+            onClickDeleteCart = {
+//                productItem ->
+//                cartViewModel.deleteCart(productItem.copy(isCart = false))
             }
         )
 
