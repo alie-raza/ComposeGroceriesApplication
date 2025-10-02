@@ -62,11 +62,12 @@ fun HomeScreen(
             HeaderLocationHome()
 
 
+
             SearchViewBar(
                 hint = stringResource(id = R.string.search_store),
                 query = searchQuery,
-                onValueChange = {
-                    if (it.isNotEmpty()) navController.navigate(Screen.Search.route)
+                onValueChange = { newValue ->
+                    homeViewModel.searchShop()
                 }
             )
 

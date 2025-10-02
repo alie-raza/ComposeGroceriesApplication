@@ -5,6 +5,7 @@ import com.alidev.groceriesapplication.domain.deletecartusecase.DeleteCartUseCas
 import com.alidev.groceriesapplication.domain.getallcartusecase.GetAllCartUseCase
 import com.alidev.groceriesapplication.domain.getallproduct.GetAllProductUseCase
 import com.alidev.groceriesapplication.domain.saveproductusecase.InsertProductsUseCase
+import com.alidev.groceriesapplication.domain.searchproductusecase.SearchProductUseCase
 import javax.inject.Inject
 
 data class UseCases @Inject constructor(
@@ -16,5 +17,5 @@ data class UseCases @Inject constructor(
     val getAllCartUseCase: GetAllCartUseCase,
     val addCartUseCase: AddCartUseCase,
     val deleteCart: DeleteCartUseCase,
-//    val searchProductUseCase: SearchProductUseCase
+    val searchProductUseCase: SearchProductUseCase
 )

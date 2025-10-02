@@ -35,5 +35,12 @@ class HomeViewModel @Inject constructor(
         useCases.addCartUseCase.invoke(productItem)
     }
 
+    fun searchShop() {
+        viewModelScope.launch(Dispatchers.IO) {
+            useCases.searchProductUseCase(query = searchQuery.value).collect { result ->
+                _productList.value = result
+            }
+        }
+    }
 
 }
